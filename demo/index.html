@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <title>VueTinyMCE</title>
+  <link href="//cdn.bootcss.com/tinymce/4.3.12/skins/lightgray/skin.min.css" rel="stylesheet">
+  <script src="//cdn.bootcss.com/vue/1.0.24/vue.js"></script>
+  <script src="//cdn.bootcss.com/tinymce/4.3.12/tinymce.min.js"></script>
+  <script src="//cdn.bootcss.com/tinymce/4.3.12/themes/modern/theme.min.js"></script>
+</head>
+<body>
+  <button @click="toggle">Toggle</button>
+  <vue-tinymce :content.sync="content" v-if="load"></vue-tinymce>
+  <div>{{content}}</div>
+  <script src="patch.js"></script>
+  <script src="../index.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
